@@ -82,8 +82,8 @@ header {
    Banner / ASCII
 ========================= */
 .banner {
-  white-space: pre;
   font-weight: 700;
+  margin-bottom: 0.75rem;
 }
 
 .ascii {
@@ -194,12 +194,12 @@ a:hover .arrow {
 ========================= */
 .quote {
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.25;
   color: var(--quote);
   text-align: center;
-  letter-spacing: 0.04em;
-  margin-top: -2rem;
-  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+  margin: 0.5rem 0 1rem;
+  max-width: 40ch;
 }
 
 .quote,
