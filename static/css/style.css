@@ -264,6 +264,10 @@ footer {
     display: none;
   }
 
+  .lntable {
+    font-size: 0.65rem;
+  }
+
   main {
     max-width: var(--content-narrow);
   }
