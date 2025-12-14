@@ -263,9 +263,21 @@ footer {
     padding: 1em;
   }
 
+  /*
   .ascii,
   .banner {
     display: none;
+  }
+  */ 
+
+  .banner {
+    display: block;
+  }
+
+  .ascii {
+    font-family: var(--font-mono);
+    font-size: 3px;
+    line-height: 1;
   }
 
   main {
