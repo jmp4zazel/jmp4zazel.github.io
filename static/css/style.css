@@ -256,6 +256,7 @@ footer {
   }
 
   html {
+    position: relative;
     font-size: clamp(13px, 1.5vw, 14px);
   }
 
@@ -265,10 +266,10 @@ footer {
 
   body::before {
     content: "";
-    position: fixed;
-    pointer-events: none;
+    position: absolute;
     z-index: -1;
     inset: 0;
+    pointer-events: none;
     background-size: cover;
     background-position: center top;
     opacity: var(--bg-overlay-opacity);
