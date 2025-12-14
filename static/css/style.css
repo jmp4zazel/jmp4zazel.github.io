@@ -42,7 +42,7 @@
 
   /* Layout */
   --content-max: 60rem;
-  --content-narrow: 45ch;
+  --content-narrow: 60ch;
 
   --pad-inline: 0.5rem;
   --pad-body: 1em;
@@ -200,25 +200,14 @@ pre {
 }
 
 /* =========================
-   Lists
+   Arrows
 ========================= */
-ul {
-  list-style: none;
-  padding-left: 0;
-}
+.arrow {
+  color: var(--fg); 
+} 
 
-ul li {
-  display: flex;
-  gap: 0.6rem;
-  align-items: baseline;
-}
-
-ul li::before {
-  content: "~>";
-  font-family: monospace;
-  font-size: 13px;
-  color: var(--muted-gray);
-  flex-shrink: 0;
+a:hover .arrow { 
+  color: var(--fg); 
 }
 
 /* =========================
