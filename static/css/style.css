@@ -46,7 +46,7 @@ html {
 body {
   background-color: var(--bg);
   position: relative;
-  font-family: var(--font-body)
+  font-family: var(--font-body);
   max-width: 720px;
   margin: 0 auto;
   padding: 1em 0;
@@ -71,19 +71,20 @@ body::before {
 /* =========================
    Layout
 ========================= */
-main,
+
 header {
   max-width: 60rem;
   margin: 0 auto;
   padding: 0 0.5rem;
-  justify-content: center;
   display: grid;
   place-items: center;
 }
 
-header {
-  display: grid;
-  place-items: center;
+main {
+  display: block;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
 }
 
 /* =========================
@@ -96,7 +97,7 @@ header {
 }
 
 .ascii {
-  font-family: var(--font-ascii)
+  font-family: var(--font-ascii);
   font-size: 0.15rem;
   color: var(--purple);
   line-height: 1;
