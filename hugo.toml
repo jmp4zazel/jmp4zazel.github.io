@@ -17,3 +17,5 @@ tag = "tags"
 [caches]
   [caches.images]
       dir = ':cacheDir/images'
+
+disableKinds = ["taxonomoy", "term"]
