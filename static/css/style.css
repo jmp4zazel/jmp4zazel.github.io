@@ -80,6 +80,23 @@ body {
   position: relative;
 }
 
+/*
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: url("/img/wallpaper.png") center / cover no-repeat;
+  opacity: var(--bg-overlay-opacity);
+
+  pointer-events: none;
+  z-index: -1;
+
+  will-change: transform;
+  transform: translateZ(0);
+}
+*/
+
 /* Background overlay */
 body::before {
   content: "";
