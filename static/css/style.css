@@ -252,7 +252,7 @@ footer {
 ========================= */
 @media (max-width: 768px) {
   main {
-    max-width: 90vw;
+    max-width: var(--content-narrow);
   }
 
   html {
@@ -261,6 +261,12 @@ footer {
 
   body {
     padding: 1em;
+  }
+
+  body::before {
+    background-size: cover;
+    background-position: center top;
+    opacity: var(--bg-overlay-opacity);
   }
 
   /*
@@ -282,13 +288,10 @@ footer {
     color: var(--purple);
   }
 
-  main {
-    max-width: var(--content-narrow);
-  }
-
   pre,
   code {
     font-size: 0.8rem;
+    overflow-x: auto;
   }
 
   ul li {
