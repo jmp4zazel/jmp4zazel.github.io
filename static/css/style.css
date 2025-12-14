@@ -266,6 +266,10 @@ footer {
    Mobile (≤ 768px)
 ========================= */
 @media (max-width: 768px) {
+  .ascii {
+    display: none;
+  }
+
   html {
     font-size: clamp(16px, 4vw, 18px);
   }
