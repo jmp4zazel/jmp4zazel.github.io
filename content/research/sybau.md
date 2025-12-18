@@ -97,6 +97,64 @@ If you are behind CGNAT:
 
 Even without CGNAT, ISPs already implement rate limiting, filtering, and mitigation. Random people “threatening” DDoS attacks are usually just repeating words they don’t understand.
 
+
+# But what about the feds?
+This is where things are different.
+
+Law enforcement cannot magically “track you” just by looking at an IP address. What they *can* do is use legal authority to **request records from your ISP**.
+
+ISPs log:
+- Which customer was assigned which public IP
+- At what time
+- From which access network
+
+If law enforcement has a valid legal request, the ISP can correlate:
+> public IP + timestamp → subscriber account
+
+So the IP address itself still isn’t the tracker.  
+The **ISP’s logs** are.
+
+If this is happening to you, it usually means:
+- You did something serious enough to justify legal process
+- You were already on someone’s radar
+- The IP was just one piece of evidence, not the starting point
+
+This is also why people use VPNs. That topic deserves its own article, because VPNs do not make you anonymous, they just shift **who can see your traffic and who holds the logs**.
+
+# I've seen regular people "track" others using an IP address though
+What they’re actually doing is **correlating digital footprints**, not tracking an IP.
+
+An IP address might provide:
+- A country or city
+- An ISP name
+- A rough region
+
+From there, OSINT techniques fill in the gaps:
+- Username reuse
+- Social media posts
+- Leaked data
+- Writing style
+- Time zones
+- Photos, metadata, habits
+
+For example:
+- An IP resolves to a city
+- The ISP’s main office is also in that city
+- The target posts photos or info that align with that location
+
+None of that comes from the IP address itself.  
+The IP is just **one weak signal among many**.
+
+# Final clarification
+When people say:
+> “I tracked them using their IP”
+
+What they usually mean is:
+> “I correlated multiple data points and the IP was the least useful one.”
+
+IP addresses are low-signal, high-noise data.  
+You get track because of you voluntarily expose, not from a routing identifier.
+
 # Final thoughts
 An IP address is:
 - Not an identity
@@ -109,4 +167,3 @@ If someone claims they can “track you” with just an IP address, what they ac
 > “I don’t understand networking, but I want to sound intimidating.”
 
 SYBAU.
-```
