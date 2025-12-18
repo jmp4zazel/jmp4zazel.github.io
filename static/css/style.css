@@ -14,7 +14,7 @@
   /* Typography */
   --font-mono: "Unifont", monospace;
 
-  --fs-root: 20px;
+  --fs-root: 17px;
   --fs-body: 1rem;
   --fs-code: 0.9rem;
 
@@ -22,23 +22,13 @@
   --lh-code: 1.5;
 
   /* Colors */
-  --bg: #0d0911;
+  --bg: #000000;
   --fg: #ffffff;
 
   --purple: #be95ff;
-  --purple-soft: #e6ccff;
-
-  --pink: #ee5396;
-  --pink-soft: #ff7eb6;
-
-  --blue: #33b1ff;
-  --blue-soft: #82cfff;
-
-  --cyan: #08bdba;
-  --green: #42be65;
-
-  --muted-gray: #dde1e6;
-  --quote: #cfcfcf;
+  --white: #ffffff;
+  --gray-white: #d0d0d0;
+  --red: #bb0000;
 
   /* Layout */
   --content-max: 60rem;
@@ -93,7 +83,6 @@ body::before {
 }
 */
 
-
 body::before {
   content: "";
   position: fixed;
@@ -133,12 +122,14 @@ p {
 }
 
 strong {
-  color: var(--pink);
+  color: var(--gray-white);
+  font-weight: 700;
 }
 
 em,
 i {
-  color: var(--green);
+  color: var(--gray-white);
+  font-weight: 600;
 }
 
 /* Headings */
@@ -147,28 +138,40 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.2em;
 }
 
-h1 { font-size: 1.25rem; }
+h1 { font-size: 1.2rem; }
 h2 { font-size: 1.1rem; }
 h3 { font-size: 1rem; }
 h4, h5, h6 { font-size: 0.95rem; }
 
-h1::before { content: "# "; color: var(--purple); }
-h2::before { content: "## "; color: var(--blue); }
-h3::before { content: "### "; color: var(--pink); }
-h4::before { content: "#### "; color: #78a9ff; }
-h5::before { content: "##### "; color: var(--cyan); }
-h6::before { content: "###### "; color: var(--blue-soft); }
+h1::before {
+  content: "[1] ";
+  color: var(--purple);
+}
+
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  color: var(--red);
+}
+
+h2::before { content: ">> "; }
+h3::before { content: ">>> "; }
+h4::before { content: ">>>> "; }
+h5::before { content: ">>>>> "; }
+h6::before { content: ">>>>>> "; }
 
 /* =========================
    Links
 ========================= */
 a {
-  color: var(--blue);
+  color: var(--gray-white);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--blue-soft);
+  color: var(--red);
 }
 
 /* =========================
@@ -200,9 +203,9 @@ pre {
 
 .ascii {
   font-family: var(--font-mono);
-  font-size: 3px;
+  font-size: 2.0px;
   line-height: 1;
-  color: var(--purple);
+  color: var(--red);
 }
 
 .base-title::before {
@@ -213,13 +216,13 @@ pre {
    Menu
 ========================= */
 #menu a {
-  color: var(--purple);
+  color: var(--white);
   margin-right: 12px;
 }
 
 #menu a:hover,
 #menu a.active {
-  color: var(--purple-soft);
+  color: var(--red);
 }
 
 /* =========================
@@ -229,15 +232,11 @@ pre {
   color: var(--fg); 
 } 
 
-a:hover .arrow { 
-  color: var(--fg); 
-}
-
 /* =========================
    Quotes
 ========================= */
 .quote {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.25;
   text-align: center;
   letter-spacing: 0.02em;
@@ -254,7 +253,7 @@ a:hover .arrow {
   margin-left: 0.6rem;
   font-size: 0.7rem;
   opacity: 0.5;
-  color: var(--muted-gray);
+  color: var(--gray-white);
 }
 
 /* =========================
@@ -265,9 +264,10 @@ a:hover .arrow {
   flex-wrap: wrap;
 
   margin: 0.8rem 0 1.2rem;
-  padding-left: 0.25rem;
+  margin-left: 1rem;
 }
 
+/*
 .category-filter button {
   all: unset;
   cursor: pointer;
@@ -287,11 +287,12 @@ a:hover .arrow {
   position: relative;
 }
 
-/* hover */
 .category-filter button:hover {
   opacity: 1;
   border-color: rgba(255, 255, 255, 0.5);
 }
+
+*/
 
 
 
@@ -329,7 +330,7 @@ footer {
     font-family: var(--font-mono);
     font-size: 1.5px;
     line-height: 1;
-    color: var(--purple);
+    color: var(--red);
   }
 
   /* Safari fix 

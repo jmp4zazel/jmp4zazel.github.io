@@ -1,36 +1,8 @@
 {{ define "main" }}
 
-{{/* collect categories only from pages that have them */}}
-{{ .Scratch.Set "cats" (dict) }}
-
-{{ range .Pages }}
-  {{ with .Params.categories }}
-    {{ range . }}
-      {{ $cats := $.Scratch.Get "cats" }}
-      {{ if not (isset $cats .) }}
-        {{ $.Scratch.Set "cats" (merge $cats (dict . true)) }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{ $cats := .Scratch.Get "cats" }}
-
-{{ if gt (len $cats) 0 }}
-<nav class="category-filter">
-  <button data-cat="all">all</button>
-  {{ range $name, $_ := $cats }}
-    <button data-cat="{{ $name }}">{{ $name }}</button>
-  {{ end }}
-</nav>
-{{ end }}
-
 <ul class="blogs">
   {{ range sort .Pages "Date" "desc" }}
-    <li class="blog-item"
-        {{ with .Params.categories }}
-          data-categories="{{ delimit . " " }}"
-        {{ end }}>
+    <li class="blog-item">
       <a href="{{ .RelPermalink }}" class="blog-link">
         {{ .Title }}
       </a>
@@ -43,20 +15,6 @@
   {{ end }}
 </ul>
 
-<script>
-  document.querySelectorAll(".category-filter button").forEach(btn => {
-    btn.onclick = () => {
-      const cat = btn.dataset.cat;
-      document.querySelectorAll(".blog-item").forEach(post => {
-        const cats = post.dataset.categories || "";
-        post.style.display =
-          cat === "all" || cats.includes(cat)
-            ? "list-item"
-            : "none";
-      });
-    };
-  });
-</script>
-
 {{ end }}
+
 

@@ -1,37 +1,38 @@
 /* =========================
-   Oxocarbon Tokens
+   Chroma Tokens (Aligned w/ Site)
 ========================= */
 :root {
-
   /* Foreground */
-  --ox-fg:        #f2f4f8;
-  --ox-fg-muted:  #dde1e6;
-  --ox-fg-dim:    #a8a8a8;
-  --ox-comment:   #6e7681;
+  --ch-fg:        #ffffff;
+  --ch-fg-muted:  #d0d0d0;
+  --ch-fg-dim:    #9a9a9a;
+  --ch-comment:   #6f6f6f;
 
-  /* Accents */
-  --ox-purple:    #be95ff;
-  --ox-pink:      #ee5396;
-  --ox-pink-soft: #ff7eb6;
-  --ox-blue:      #33b1ff;
-  --ox-green:     #42be65;
-  --ox-teal:      #08bdba;
+  /* Identity */
+  --ch-purple:    #be95ff;
+  --ch-purple-soft: #c9b6ff;
 
-  /* Alerts */
-  --ox-red:       #f85149;
-  --ox-red-bg:    #2a0f14;
+  /* Intent / Danger */
+  --ch-red:       #bb0000;
+  --ch-red-bg:    #2a0f14;
 }
 
 /* =========================
    Base
 ========================= */
 .chroma {
-  color: var(--ox-fg);
+  color: var(--ch-fg);
   background-color: transparent;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.chroma pre {
+  overflow: visible;
 }
 
 /* =========================
-   Scrollbars
+   Scrollbars / Tables
 ========================= */
 .chroma .lntable {
   width: auto;
@@ -45,57 +46,35 @@
   overflow-y: hidden;
 }
 
-.chroma {
-  max-height: 50vh;
-  overflow-y: auto;
-}
-
-.chroma pre {
-  overflow: visible;
+/* =========================
+   Line Numbers
+========================= */
+.chroma .lnt,
+.chroma .ln {
+  color: var(--ch-comment);
+  padding: 0 0.4em;
+  margin-right: 0.4em;
+  font-size: 0.75rem;
 }
 
 /* =========================
    Errors
 ========================= */
 .chroma .err {
-  color: var(--ox-red);
-  background-color: var(--ox-red-bg);
+  color: var(--ch-red);
+  background-color: var(--ch-red-bg);
 }
 
 /* =========================
-   Line Numbers
-========================= */
-.chroma .lnt,
-.chroma .ln {
-  color: var(--ox-comment);
-  padding: 0 0.4em;
-  font-size: 15px;
-  margin-right: 0.4em;
-}
-
-.chroma .hl {
-  width: 100%;
-  display: block;
-  background-color: var(--ox-hl);
-}
-
-/* =========================
-   Keywords
+   Keywords / Control Flow
 ========================= */
 .chroma .k,
 .chroma .kd,
 .chroma .kn,
-.chroma .kr {
-  color: var(--ox-purple);
-}
-
+.chroma .kr,
 .chroma .kp,
 .chroma .kt {
-  color: var(--ox-pink);
-}
-
-.chroma .kc {
-  color: var(--ox-green);
+  color: var(--ch-purple);
 }
 
 /* =========================
@@ -109,28 +88,27 @@
 .chroma .py,
 .chroma .bp,
 .chroma .x {
-  color: var(--ox-fg);
+  color: var(--ch-fg);
 }
 
 .chroma .nc,
-.chroma .ne,
-.chroma .nn {
-  color: var(--ox-pink);
-  font-weight: bold;
+.chroma .ne {
+  color: var(--ch-fg);
+  font-weight: 700;
 }
 
-.chroma .nd,
 .chroma .nf {
-  color: var(--ox-purple);
+  color: var(--ch-red);
+  font-weight: 700;
 }
 
 .chroma .nl {
-  color: var(--ox-green);
-  font-weight: bold;
+  color: var(--ch-fg-muted);
+  font-weight: 600;
 }
 
 /* =========================
-   Numbers
+   Numbers / Literals
 ========================= */
 .chroma .m,
 .chroma .mb,
@@ -139,57 +117,42 @@
 .chroma .mi,
 .chroma .mo,
 .chroma .il {
-  color: var(--ox-purple);
+  color: var(--ch-fg-dim);
 }
 
 /* =========================
-   Strings
+   Strings / Data
 ========================= */
 .chroma .s,
 .chroma .sb,
 .chroma .sc,
 .chroma .sd,
 .chroma .s1,
-.chroma .s2 {
-  color: var(--ox-pink-soft);
+.chroma .s2,
+.chroma .sx,
+.chroma .ss {
+  color: var(--ch-purple-soft);
 }
 
+/* Escapes / Interpolation */
 .chroma .se,
 .chroma .sh,
-.chroma .sr {
-  color: var(--ox-red);
-}
-
+.chroma .sr,
 .chroma .si {
-  color: var(--ox-green);
-}
-
-.chroma .sx {
-  color: var(--ox-purple);
-}
-
-.chroma .ss {
-  color: var(--ox-blue);
+  color: var(--ch-red);
 }
 
 /* =========================
-   Operators & Punctuation
+   Operators / Punctuation
 ========================= */
 .chroma .o,
-.chroma .ow {
-  color: var(--ox-pink);
-}
-
-.chroma .nt {
-  color: var(--ox-green);
-}
-
+.chroma .ow,
 .chroma .p {
-  color: var(--ox-fg-dim);
+  color: var(--ch-fg-dim);
 }
 
 /* =========================
-   Constants & Variables
+   Constants / Variables
 ========================= */
 .chroma .no,
 .chroma .nv,
@@ -197,11 +160,11 @@
 .chroma .vg,
 .chroma .vi,
 .chroma .vm {
-  color: var(--ox-green);
+  color: var(--ch-fg-muted);
 }
 
 /* =========================
-   Comments & Whitespace
+   Comments / Whitespace
 ========================= */
 .chroma .c,
 .chroma .ch,
@@ -211,7 +174,7 @@
 .chroma .go,
 .chroma .gp,
 .chroma .w {
-  color: var(--ox-comment);
+  color: var(--ch-comment);
   font-style: italic;
 }
 
@@ -219,33 +182,42 @@
    Preprocessor / Special
 ========================= */
 .chroma .cpf {
-  color: var(--ox-blue);
-  font-weight: bold;
+  color: var(--ch-fg);
+  font-weight: 700;
 }
 
 /* =========================
    Diff / Git
 ========================= */
 .chroma .gd {
-  color: var(--ox-red);
+  color: var(--ch-red);
   background-color: #3a1116;
 }
 
 .chroma .gi {
-  color: var(--ox-green);
+  color: var(--ch-fg);
   background-color: #0f2e1c;
 }
 
-.chroma .gr { color: var(--ox-red); }
-.chroma .gh,
-.chroma .gu { color: var(--ox-blue); font-weight: bold; }
+.chroma .gr { color: var(--ch-red); }
 
-.chroma .gs { font-weight: bold; }
-.chroma .gt { color: var(--ox-pink); }
+.chroma .gh,
+.chroma .gu {
+  color: var(--ch-purple);
+  font-weight: 700;
+}
+
+.chroma .gs { font-weight: 700; }
+.chroma .gt { color: var(--ch-red); }
 .chroma .gl { text-decoration: underline; }
 
+/* =========================
+   Mobile
+========================= */
 @media (max-width: 768px) {
-.chroma .lnt {
+  .chroma .lnt,
+  .chroma .ln {
     font-size: 0.6rem;
   }
+}
 
