@@ -50,7 +50,7 @@ case VK_NUMPAD0:
 
 
 # Implementation 
-Let’s start with the implementation. Don’t worry—I’ll walk through it step by step. First, we’ll create a keyboard hook.
+Let’s start with the implementation. Don’t worry, I’ll walk through it step by step. First, we’ll create a keyboard hook.
 
 ```cpp
 int main()
