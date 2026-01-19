@@ -1,6 +1,6 @@
 +++
-title = "azazel · homepage"
-description = "azazel's silly homepage."
+title = "grit · homepage"
+description = "grit's silly homepage."
 +++
 
 

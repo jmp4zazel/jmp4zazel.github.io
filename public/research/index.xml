@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>grit · research on azazel</title>
+    <link>http://localhost:1313/research/</link>
+    <description>Recent content in grit · research on azazel</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Writing a program that monitor keystrokes</title>
+      <link>http://localhost:1313/research/keyloggers/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/research/keyloggers/</guid>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;I’ve been messing around with malware development recently, and as part of my second warm-up project, I decided to write a simple keylogger. The goal here is to understand &lt;strong&gt;how userland keyloggers work on Windows&lt;/strong&gt;, without getting overwhelmed by low-level internals.&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-is-a-keylogger&#34;&gt;What is a keylogger?&lt;/h1&gt;&#xA;&lt;p&gt;A keylogger is a type of malware designed to &lt;strong&gt;record keystrokes&lt;/strong&gt; in order to steal sensitive information such as passwords, credit card numbers, and private messages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SYBAU: You Are Not Tracking Anyone With an IP Address</title>
+      <link>http://localhost:1313/research/sybau/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/research/sybau/</guid>
+      <description>&lt;h1 id=&#34;kinda-random-article-why&#34;&gt;Kinda random article, why?&lt;/h1&gt;&#xA;&lt;p&gt;I keep hearing a ton of misinformation about how you can supposedly use an IP address to track a person. I’ve also been a bit rusty on networking fundamentals, so this is a good excuse to refresh them.&lt;/p&gt;&#xA;&lt;p&gt;Learning by teaching.&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-in-the-world-is-an-ip-address&#34;&gt;What in the world is an IP address?&lt;/h1&gt;&#xA;&lt;p&gt;An IP address is a &lt;strong&gt;logical addressing system&lt;/strong&gt; used to identify a network interface so data can be routed across networks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CVE-2025-10767</title>
+      <link>http://localhost:1313/research/cve-2025-10767/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/research/cve-2025-10767/</guid>
+      <description>&lt;h1 id=&#34;whats-up&#34;&gt;What&amp;rsquo;s up?&lt;/h1&gt;&#xA;&lt;p&gt;Lately I’ve been digging into vulnerability research - reading writeups and watching videos about adversarial toolkits that turned out to be vulnerable themselves. Shout-out to my friend Chebuya for the insights on this topic.&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-made-me-delve-into-this-topic&#34;&gt;What made me delve into this topic?&lt;/h1&gt;&#xA;&lt;p&gt;Most vulnerability researchers, hackers, and threat actors look for bugs in enterprise software, apps, and the like. But what if we look for vulnerabilities in the tools researchers use? IDA, BloodHound, Havoc, Sliver, Cobalt Strike - it’s ironic, but these tools can also contain exploitable mistakes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

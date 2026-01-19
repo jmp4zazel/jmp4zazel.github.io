@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <title>
+      
+        SYBAU: You Are Not Tracking Anyone With an IP Address
+      
+    </title>
+
+    
+    <link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+    <link rel="manifest" href="../../site.webmanifest">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+          content="SYBAU: You Are Not Tracking Anyone With an IP Address">
+    <meta property="og:description"
+          content="Why an IP address is not a tracking mechanism, not an identity, and not the stupid flex skids think it is.">
+    <meta property="og:image"
+          content="">
+    <meta property="og:url" content="http://localhost:1313/research/sybau/">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    
+    
+    
+
+  <link rel="stylesheet"
+        href="../../css/style.min.3f73f2347843a7a89acfe85a677d60b2.css"
+        integrity="md5-P3PyNHhDp6iaz&#43;haZ31gsg=="
+        crossorigin>
+
+  <link rel="stylesheet"
+        href="../../css/chroma.min.a44a970f5e0d1481ed8d220169806a06.css"
+        integrity="md5-pEqXD14NFIHtjSIBaYBqBg=="
+        crossorigin>
+
+  </head>
+
+  <body>
+    
+    <header>
+      <div class="banner">
+        <pre class=ascii>
+              .__  __   
+   ___________|__|/  |_ 
+  / ___\_  __ \  \   __\
+ / /_/  >  | \/  ||  |  
+ \___  /|__|  |__||__|  
+/_____/                 
+</pre>
+
+      </div>
+
+      
+      <p class="quote">
+        Obsess over every detail. Ask why it works. Ask why it isn’t built another way.
+      </p>
+
+      
+      <nav id="menu">
+        <a href="../../"
+           class="">
+          <span class="arrow">»</span> home
+        </a>
+
+        <a href="../../research"
+           class="">
+          <span class="arrow">»</span> research
+        </a>
+
+        <a href="../../tags"
+           class="">
+          <span class="arrow">»</span> tags
+        </a>
+
+        <a href="../../about"
+           class="">
+          <span class="arrow">»</span> about
+        </a>
+      </nav>
+    </header>
+
+    
+    <main>
+      
+  
+
+  <article>
+    
+      <h2>SYBAU: You Are Not Tracking Anyone With an IP Address</h2>
+    
+
+    <h1 id="kinda-random-article-why">Kinda random article, why?</h1>
+<p>I keep hearing a ton of misinformation about how you can supposedly use an IP address to track a person. I’ve also been a bit rusty on networking fundamentals, so this is a good excuse to refresh them.</p>
+<p>Learning by teaching.</p>
+<h1 id="what-in-the-world-is-an-ip-address">What in the world is an IP address?</h1>
+<p>An IP address is a <strong>logical addressing system</strong> used to identify a network interface so data can be routed across networks.</p>
+<p>“Logical” means it is software-defined. It is not tied to a physical location, a device owner, or an identity. IP addresses can be assigned dynamically or statically, reassigned, rotated, or shared between many users.</p>
+<p>An IP address exists so packets know <strong>where to go</strong>, not <strong>who you are</strong>.</p>
+<h2 id="wait-what-does-logical-addressing-even-mean">Wait, what does “logical addressing” even mean?</h2>
+<p>It means the identifier exists purely at the network layer. Unlike MAC addresses or physical wiring, IP addresses are abstract and flexible.</p>
+<p>Your IP can change:</p>
+<ul>
+<li>When you reconnect to a network</li>
+<li>When your ISP rotates addresses</li>
+<li>When you move between networks</li>
+<li>When traffic is routed through NAT or CGNAT</li>
+</ul>
+<p>There is nothing inherently personal about it.</p>
+<h2 id="how-is-an-ip-address-useful-in-a-real-world-scenario">How is an IP address useful in a real-world scenario?</h2>
+<p>Let’s say you visit <code>youtube.com</code> in your browser.</p>
+<ol>
+<li>Your computer sends a request to a DNS server asking for the IP address associated with <code>youtube.com</code>.</li>
+<li>The DNS server responds with one or more IP addresses.</li>
+<li>Your computer sends an HTTP request to that IP address.</li>
+<li>Routers across the internet forward your packets hop-by-hop based on the destination IP address. This process is called <strong>routing</strong>.</li>
+<li>The YouTube server processes the request and sends the response back to your <strong>public IP address</strong>.</li>
+</ol>
+<p>Without IP addresses, the internet literally could not function. There would be no way for responses to find their way back to the requester.</p>
+<h2 id="now-you-see">Now you see</h2>
+<p>IP addresses are not about identity or tracking. They are about <strong>delivery</strong>.</p>
+<p>They exist so packets can reach the correct endpoint and return a response.</p>
+<h1 id="but-can-you-still-track-location-from-an-ip-address">But can you still track location from an IP address?</h1>
+<p>Yes — but not in the way people usually imagine.</p>
+<p>An IP address does <strong>not</strong> give you:</p>
+<ul>
+<li>Someone’s home address</li>
+<li>Their exact location</li>
+<li>Their identity</li>
+</ul>
+<p>At best, it provides a <strong>general location estimate</strong>, and even that is often wrong.</p>
+<h1 id="so-how-does-ip-based-location-actually-work">So how does IP-based location actually work?</h1>
+<p>IP lookup tools query databases that map IP address blocks to:</p>
+<ul>
+<li>Internet Service Providers</li>
+<li>Registered regions or cities</li>
+<li>Network infrastructure locations</li>
+</ul>
+<p>This mapping is based on <strong>where the ISP’s network operates</strong>, not where the user physically is.</p>
+<p>In practice:</p>
+<ul>
+<li>Mobile users often appear in the same city nationwide</li>
+<li>CGNAT users share a single public IP</li>
+<li>VPN users appear wherever the exit node is</li>
+<li>Two users in different provinces can resolve to the same city</li>
+</ul>
+<p>You are seeing the location of the <strong>network endpoint</strong>, not the person.</p>
+<h1 id="can-someone-hack-you-just-by-knowing-your-ip-address">Can someone hack you just by knowing your IP address?</h1>
+<p>An IP address alone is not an exploit.</p>
+<p>You are only at risk if:</p>
+<ul>
+<li>Your IP is publicly reachable</li>
+<li>You are exposing a service</li>
+<li>That service has a vulnerability</li>
+</ul>
+<p>For example, hosting an unpatched Windows 7 server directly on the internet is a bad idea. But the average user is not doing this.</p>
+<p>Most people:</p>
+<ul>
+<li>Are behind NAT or carrier-grade NAT (CGNAT)</li>
+<li>Do not expose services to the internet</li>
+<li>Are protected by basic firewalling</li>
+</ul>
+<p>Knowing your IP address does not magically grant access.</p>
+<h1 id="what-about-people-threatening-to-ddos-my-ip-address">What about people threatening to DDoS my IP address?</h1>
+<p>These threats are almost always meaningless.</p>
+<p>If you are behind CGNAT:</p>
+<ul>
+<li>You share a public IP with many users</li>
+<li>Your ISP controls traffic filtering</li>
+<li>Your ISP absorbs or drops malicious traffic upstream</li>
+</ul>
+<p>Even without CGNAT, ISPs already implement rate limiting, filtering, and mitigation. Random people “threatening” DDoS attacks are usually just repeating words they don’t understand.</p>
+<h1 id="but-what-about-the-feds">But what about the feds?</h1>
+<p>This is where things are different.</p>
+<p>Law enforcement cannot magically “track you” just by looking at an IP address. What they <em>can</em> do is use legal authority to <strong>request records from your ISP</strong>.</p>
+<p>ISPs log:</p>
+<ul>
+<li>Which customer was assigned which public IP</li>
+<li>At what time</li>
+<li>From which access network</li>
+</ul>
+<p>If law enforcement has a valid legal request, the ISP can correlate:</p>
+<blockquote>
+<p>public IP + timestamp → subscriber account</p>
+</blockquote>
+<p>So the IP address itself still isn’t the tracker.<br>
+The <strong>ISP’s logs</strong> are.</p>
+<p>If this is happening to you, it usually means:</p>
+<ul>
+<li>You did something serious enough to justify legal process</li>
+<li>You were already on someone’s radar</li>
+<li>The IP was just one piece of evidence, not the starting point</li>
+</ul>
+<p>This is also why people use VPNs. That topic deserves its own article, because VPNs do not make you anonymous, they just shift <strong>who can see your traffic and who holds the logs</strong>.</p>
+<h1 id="ive-seen-regular-people-track-others-using-an-ip-address-though">I&rsquo;ve seen regular people &ldquo;track&rdquo; others using an IP address though</h1>
+<p>What they’re actually doing is <strong>correlating digital footprints</strong>, not tracking an IP.</p>
+<p>An IP address might provide:</p>
+<ul>
+<li>A country or city</li>
+<li>An ISP name</li>
+<li>A rough region</li>
+</ul>
+<p>From there, OSINT techniques fill in the gaps:</p>
+<ul>
+<li>Username reuse</li>
+<li>Social media posts</li>
+<li>Leaked data</li>
+<li>Writing style</li>
+<li>Time zones</li>
+<li>Photos, metadata, habits</li>
+</ul>
+<p>For example:</p>
+<ul>
+<li>An IP resolves to a city</li>
+<li>The ISP’s main office is also in that city</li>
+<li>The target posts photos or info that align with that location</li>
+</ul>
+<p>None of that comes from the IP address itself.<br>
+The IP is just <strong>one weak signal among many</strong>.</p>
+<h1 id="final-clarification">Final clarification</h1>
+<p>When people say:</p>
+<blockquote>
+<p>“I tracked them using their IP”</p>
+</blockquote>
+<p>What they usually mean is:</p>
+<blockquote>
+<p>“I correlated multiple data points and the IP was the least useful one.”</p>
+</blockquote>
+<p>IP addresses are low-signal, high-noise data.<br>
+You get track because of you voluntarily expose, not from a routing identifier.</p>
+<h1 id="final-thoughts">Final thoughts</h1>
+<p>An IP address is:</p>
+<ul>
+<li>Not an identity</li>
+<li>Not a tracking mechanism</li>
+<li>Not a hacking shortcut</li>
+</ul>
+<p>It is a routing label used by the internet to move packets from point A to point B.</p>
+<p>If someone claims they can “track you” with just an IP address, what they actually mean is:</p>
+<blockquote>
+<p>“I don’t understand networking, but I want to sound intimidating.”</p>
+</blockquote>
+<p>SYBAU.</p>
+
+  </article>
+
+    </main>
+
+    
+    <footer>
+      
+    </footer>
+  </body>
+</html>

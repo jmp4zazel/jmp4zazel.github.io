@@ -1,12 +1,12 @@
 +++
 date = 2025-12-07T02:57:52+08:00
-title = "azazel · about"
-description = "who the heck is azazel? background, interest, skills, and achievements."
+title = "grit · about"
+description = "who the heck is grit? background, interest, skills, and achievements."
 noTitle = true
 +++
 
 # whoami
-Hey friend, I’m **Neswin**. I’ve been into cybersecurity since I was 7, and I love Offensive Security Research & Development.
+HI THERE, I’m **Neswin**. I’ve been into cybersecurity since I was 7, and I love Offensive Tradecraft Research & Development.
 
 Outside of infosec, I care a lot about self-improvement and mental health. Offline, I train in combat sports, watch K-dramas and romcoms (yes, judge me), and dive into neuropsychology, science, and history.
 
@@ -19,7 +19,7 @@ Outside of infosec, I care a lot about self-improvement and mental health. Offli
 - HackTheBox: Pro Labs — Dante, Zephyr
 
 # contact
-GitHub: [jmp4zazel](https://github.com/jmp4zazel)
+GitHub: [0xgrit](https://github.com/0xgrit)
 
 # wall of credit
 I didn’t get here on my own. Everything I’ve learned so far is the result of people who took the time to help me, answer questions, challenge my thinking, and guide me through the rough parts of this field. I’m genuinely grateful for the patience, knowledge, and support they shared with me along the way.

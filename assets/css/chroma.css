@@ -23,7 +23,6 @@
 .chroma {
   color: var(--ch-fg);
   background-color: transparent;
-  max-height: 50vh;
   overflow-y: auto;
 }
 
@@ -41,9 +40,7 @@
   display: block;
   padding: 0;
   border-spacing: 0;
-
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto;
 }
 
 /* =========================

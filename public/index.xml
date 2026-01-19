@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>grit · homepage on azazel</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in grit · homepage on azazel</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Writing a program that monitor keystrokes</title>
+      <link>http://localhost:1313/research/keyloggers/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/research/keyloggers/</guid>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;&#xA;&lt;p&gt;I’ve been messing around with malware development recently, and as part of my second warm-up project, I decided to write a simple keylogger. The goal here is to understand &lt;strong&gt;how userland keyloggers work on Windows&lt;/strong&gt;, without getting overwhelmed by low-level internals.&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-is-a-keylogger&#34;&gt;What is a keylogger?&lt;/h1&gt;&#xA;&lt;p&gt;A keylogger is a type of malware designed to &lt;strong&gt;record keystrokes&lt;/strong&gt; in order to steal sensitive information such as passwords, credit card numbers, and private messages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SYBAU: You Are Not Tracking Anyone With an IP Address</title>
+      <link>http://localhost:1313/research/sybau/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/research/sybau/</guid>
+      <description>&lt;h1 id=&#34;kinda-random-article-why&#34;&gt;Kinda random article, why?&lt;/h1&gt;&#xA;&lt;p&gt;I keep hearing a ton of misinformation about how you can supposedly use an IP address to track a person. I’ve also been a bit rusty on networking fundamentals, so this is a good excuse to refresh them.&lt;/p&gt;&#xA;&lt;p&gt;Learning by teaching.&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-in-the-world-is-an-ip-address&#34;&gt;What in the world is an IP address?&lt;/h1&gt;&#xA;&lt;p&gt;An IP address is a &lt;strong&gt;logical addressing system&lt;/strong&gt; used to identify a network interface so data can be routed across networks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>grit · about</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 07 Dec 2025 02:57:52 +0800</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;whoami&#34;&gt;whoami&lt;/h1&gt;&#xA;&lt;p&gt;HI THERE, I’m &lt;strong&gt;Neswin&lt;/strong&gt;. I’ve been into cybersecurity since I was 7, and I love Offensive Tradecraft Research &amp;amp; Development.&lt;/p&gt;&#xA;&lt;p&gt;Outside of infosec, I care a lot about self-improvement and mental health. Offline, I train in combat sports, watch K-dramas and romcoms (yes, judge me), and dive into neuropsychology, science, and history.&lt;/p&gt;&#xA;&lt;h1 id=&#34;speaking-engagements&#34;&gt;speaking engagements&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;HackTheBox Meetup&lt;/strong&gt; — How to Get Started in Cybersecurity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;TenguCon&lt;/strong&gt; — Phishing and Social Engineering in the Wild&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;certificationstrainings&#34;&gt;certifications/trainings&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;HackTheBox: Certified Penetration Testing Specialist&lt;/li&gt;&#xA;&lt;li&gt;HackTheBox: Pro Labs — Dante, Zephyr&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;contact&#34;&gt;contact&lt;/h1&gt;&#xA;&lt;p&gt;GitHub: &lt;a href=&#34;https://github.com/0xgrit&#34;&gt;0xgrit&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CVE-2025-10767</title>
+      <link>http://localhost:1313/research/cve-2025-10767/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/research/cve-2025-10767/</guid>
+      <description>&lt;h1 id=&#34;whats-up&#34;&gt;What&amp;rsquo;s up?&lt;/h1&gt;&#xA;&lt;p&gt;Lately I’ve been digging into vulnerability research - reading writeups and watching videos about adversarial toolkits that turned out to be vulnerable themselves. Shout-out to my friend Chebuya for the insights on this topic.&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-made-me-delve-into-this-topic&#34;&gt;What made me delve into this topic?&lt;/h1&gt;&#xA;&lt;p&gt;Most vulnerability researchers, hackers, and threat actors look for bugs in enterprise software, apps, and the like. But what if we look for vulnerabilities in the tools researchers use? IDA, BloodHound, Havoc, Sliver, Cobalt Strike - it’s ironic, but these tools can also contain exploitable mistakes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
