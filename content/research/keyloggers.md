@@ -273,6 +273,8 @@ LRESULT CALLBACK LowLevelKeyboardProc ( int code, WPARAM wParam, LPARAM lParam )
 
 At this point, we have all the core components in place: a keyboard hook to intercept input, a hook callback that Windows invokes on each keyboard event, a keycode translation system to convert virtual key codes into readable characters, and a message loop to keep the process alive. Together, these pieces are enough to build a fully functional userland keylogger. The full version which also includes file exfiltration and sending logs via a Discord webhook is available on my [GitHub](https://github.com/0xgrit/Junbi/tree/main/Keylogger) feel free to reference it. 
 
+<img width="1011" height="396" alt="image" src="https://github.com/user-attachments/assets/6a3cf9b6-ca34-4aab-b1a9-f4c78d47914b" />
+
 # Now, how do we detect this? 
 Processing **WM_KEYDOWN** in a background process with no visible UI can already be a red flag, especially if the program has no real reason to care about keyboard input. On its own, **WM_KEYDOWN** is normal and used everywhere, but it becomes suspicious when a process keeps handling these messages while not in focus, having no active window, and offering no user-facing functionality. When this is paired with a global low-level keyboard hook **(WH_KEYBOARD_LL)**, a hook that stays installed for a long time, and keystrokes being stored or buffered somewhere, it starts to look much more like keylogging behavior than a legitimate app.
 
