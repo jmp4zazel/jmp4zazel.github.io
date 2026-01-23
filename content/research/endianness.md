@@ -1,6 +1,6 @@
 +++
 title = 'Endianness'
-date = 2026-01-21
+date = 2026-01-21T23:59:00+08:00
 description = "Explaining little-endian and big-endian systems, and how multi-byte values are stored in memory"
 tags = ["lowlevel"]
 +++
