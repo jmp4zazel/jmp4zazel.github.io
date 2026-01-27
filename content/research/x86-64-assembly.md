@@ -57,7 +57,6 @@ RDX      EDX      DX       DL / DH
 Disassemblers almost always use the **historical names** (**RAX**, **RBX**, etc.) rather than numeric identifiers, because they are easier to read and match older documentation.
 ## Additional General-Purpose Registers
 
-
 ```
 64-bit   32-bit   16-bit   8-bit     Convention
 
