@@ -55,7 +55,7 @@ RDX      EDX      DX       DL / DH
 ```
 
 Disassemblers almost always use the **historical names** (**RAX**, **RBX**, etc.) rather than numeric identifiers, because they are easier to read and match older documentation.
-## Additional General-Purpose Registers
+## General Registers with Conventional roles
 
 ```
 64-bit   32-bit   16-bit   8-bit     Convention
@@ -180,12 +180,13 @@ However, these are only **recommendations**, not strict rules. Compilers are fre
 Note: Even though registers like `RSI` and `RDI` have traditional roles, they are still **general-purpose registers**. The compiler can use them however it wants.
 
 ### RSP — Stack pointer
-- Points to the **top of the stack**
+- Points to the **top of the stack** because the CPU needs one trusted, always-known location to manage function calls, local storage, and control flow.
 - Represents the most recent value pushed onto the stack
 - Has special meaning and should not be used arbitrarily
 
+
 ### RBP — Base pointer
-- Points to the **base of the current stack frame**
+- Points to the **base of the current stack frame** to provide a stable reference point for accessing local variables, saved registers, and return information, because RSP moves during function execution.
 - Commonly used when working with function calls and local variables
 
 ### RIP — Instruction pointer
