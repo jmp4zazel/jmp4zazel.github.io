@@ -5,7 +5,6 @@
   font-family: "Unifont";
   src: 
     url("../../static/fonts/unifont.woff2") format("woff2"), 
-  font-display: swap;
 }
 
 /* =========================
