@@ -355,11 +355,11 @@ When using signed integers, you'll see:
 - **JLE** (Jump if Less or Equal)
 - **JGE** (Jump if Greater or Equal)
 
-**Why does this matter?**
+### Why does this matter?
 
 The compiler emits different code depending on whether the programmer declared variables as unsigned versus signed. This means a reverse engineer or decompiler can use these different assembly instructions to infer whether the variables were likely unsigned or signed in the original high-level language.
 
-**How does the hardware handle this?**
+### How does the hardware handle this?
 
 The hardware doesn't actually care whether humans interpret bits as signed or unsigned. When executing arithmetic operations like ADD and SUB, the hardware:
 1. Performs the operation as if operands were **both** unsigned **and** signed
