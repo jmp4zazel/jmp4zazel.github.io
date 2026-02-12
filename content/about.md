@@ -19,7 +19,7 @@ Outside of infosec, I care a lot about self-improvement and mental health. Offli
 - HackTheBox: Pro Labs — Dante, Zephyr
 
 # contact
-GitHub: [0xgrit](https://github.com/0xgrit)
+GitHub: [grit8086](https://github.com/grit8086)
 
 # wall of credit
 I didn’t get here on my own. Everything I’ve learned so far is the result of people who took the time to help me, answer questions, challenge my thinking, and guide me through the rough parts of this field. I’m genuinely grateful for the patience, knowledge, and support they shared with me along the way.
@@ -34,7 +34,7 @@ I didn’t get here on my own. Everything I’ve learned so far is the result of
 * @jimididit
 * @texasmetalhead
 * @fr0j
-* @xrombar
+* @xrombar/bakki
 * @gatari
 * @codextf2
 * @0xdeluks
