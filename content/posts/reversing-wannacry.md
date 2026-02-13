@@ -19,41 +19,55 @@ now looking at **_start**, looking at line **57** we can see here that it's call
 
 Now, let's look at our **main()** function. I already renamed these variables, so you can understand it but I'm still going to explain these.
 ```c
-    int32_t main()
+int32_t main()
 
-        void variableContainingURL
-        char* AnotherVariableContainingURL
-        char* VariableContainingURL
+    void variableContainingURL
+    char* AnotherVariableContainingURL
+    char* VariableContainingURL
 
-        VariableContainingURL, AnotherVariableContainingURL =
-            __builtin_memcpy(dest: &variableContainingURL, 
-            src: "
-                http://www.iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com", 
-            count: 56)
+    VariableContainingURL,
+    AnotherVariableContainingURL =
+        __builtin_memcpy(
+            dest: &variableContainingURL,
+            src: "http://www.iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com",
+            count: 56
+        )
 
-        *VariableContainingURL = *AnotherVariableContainingURL
-        int32_t var_17
+    *VariableContainingURL = *AnotherVariableContainingURL
 
-        __builtin_memset(dest: &var_17, ch: 0, count: 23)
-        int32_t hInternet = InternetOpenA(lpszAgent: nullptr, 
-            dwAccessType: 1, lpszProxy: nullptr, lpszProxyBypass: nullptr, 
-            dwFlags: 0)
+    int32_t var_17
+    __builtin_memset(dest: &var_17, ch: 0, count: 23)
 
-        int32_t hInternet_1 = InternetOpenUrlA(hInternet, 
-            lpszUrl: &variableContainingURL, lpszHeaders: nullptr, 
-            dwHeadersLength: 0, dwFlags: 0x84000000, dwContext: 0)
-        
-        if (hInternet_1 != 0)
-            InternetCloseHandle(hInternet)
-            InternetCloseHandle(hInternet: hInternet_1)
-            return 0
-        
+    int32_t hInternet =
+        InternetOpenA(
+            lpszAgent: nullptr,
+            dwAccessType: 1,
+            lpszProxy: nullptr,
+            lpszProxyBypass: nullptr,
+            dwFlags: 0
+        )
+
+    int32_t hInternet_1 =
+        InternetOpenUrlA(
+            hInternet,
+            lpszUrl: &variableContainingURL,
+            lpszHeaders: nullptr,
+            dwHeadersLength: 0,
+            dwFlags: 0x84000000,
+            dwContext: 0
+        )
+
+    if (hInternet_1 != 0)
         InternetCloseHandle(hInternet)
-        InternetCloseHandle(hInternet: 0)
-
-        stage2()
-
+        InternetCloseHandle(hInternet_1)
         return 0
+
+    InternetCloseHandle(hInternet)
+    InternetCloseHandle(0)
+
+    stage2()
+
+    return 0
 ```
 
 
