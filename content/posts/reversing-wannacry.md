@@ -10,11 +10,11 @@ before finding the entrypoint of the malware, we can tell that this malware is w
 
 now looking at **_start**, looking at line **57** we can see here that it's calling to a function, so this is most likely the entrypoint I already renamed it to **main()**
 ```c
-  53 @ 00409b3a  uint32_t wShowWindow_1 = wShowWindow
-  54 @ 00409b3b  char* var_90 = esi
-  55 @ 00409b3c  int32_t var_94_1 = 0
-  56 @ 00409b44  HMODULE var_98_1 = GetModuleHandleA(lpModuleName: nullptr)
-  57 @ 00409b45  main()
+uint32_t wShowWindow_1 = wShowWindow
+char* var_90 = esi
+int32_t var_94_1 = 0
+HMODULE var_98_1 = GetModuleHandleA(lpModuleName: nullptr)
+main()
 ```
 
 Now, let's look at our **main()** function. I already renamed these variables, so you can understand it but I'm still going to explain these.
